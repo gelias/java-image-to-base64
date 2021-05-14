@@ -35,7 +35,7 @@ public class Main {
         byte[] destinyByteArray = Base64.getDecoder().decode(stringBase64);
         System.out.println("ByteArray count recheck: "+destinyByteArray.length);
 
-        // FROM byte[] to image
+        // FROM base64 string to image
         InputStream is = new ByteArrayInputStream(destinyByteArray);
         BufferedImage newBi = ImageIO.read(is);
         ImageIO.write(newBi, "jpg", target.toFile());
